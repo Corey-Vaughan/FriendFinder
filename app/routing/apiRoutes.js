@@ -15,10 +15,10 @@ module.exports = function(app) {
 		friends.push(req.body);
 		//Return best match
 		res.json(findMatch(friends))
-		//Write new data to friends.js
-		fs.writeFile(path.join(__dirname, "../data/friends.js"), JSON.stringify(friends), function (err) {
-			if (err) throw err
-		});
+		//Write new data to friends.js (Messes up friends.js currently)
+		// fs.writeFile(path.join(__dirname, "../data/friends.js"), JSON.stringify(friends), function (err) {
+		// 	if (err) throw err
+		// });
 	});
 }
 
