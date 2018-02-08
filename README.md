@@ -10,8 +10,8 @@ https://dashboard.heroku.com/apps/intense-gorge-35635
 Check out this demo version of the site. Use this as a model for how we expect your assignment look and operate.
 Create a folder called FriendFinder. Inside the folder, organize your directories so it matches the following:
 
-
-  `FriendFinder
+```
+  FriendFinder
     - app
       - data
         - friends.js
@@ -23,8 +23,8 @@ Create a folder called FriendFinder. Inside the folder, organize your directorie
         - htmlRoutes.js
     - node_modules
     - package.json
-    - server.js`
-
+    - server.js
+```
 # Instructions
 
 
@@ -50,8 +50,8 @@ A POST routes /api/friends. This will be used to handle incoming survey results.
 
 You should save your application's data inside of app/data/friends.js as an array of objects. Each of these objects should roughly follow the format below.
 
-
-`{
+```
+{
   "name":"Ahmed",
   "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
   "scores":[
@@ -66,13 +66,13 @@ You should save your application's data inside of app/data/friends.js as an arra
       4,
       1
     ]
-}`
-
+}
+```
 Determine the user's most compatible friend using the following as a guide:
 
 
 
-Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
+Convert each user's results into a simple array of numbers (ex: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`).
 With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the totalDifference.
 
 
