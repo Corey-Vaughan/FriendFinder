@@ -1,5 +1,7 @@
 //------ Dependencies ------//
 var friends = require("../data/friends.js");
+var fs = require("fs");
+var path = require("path");
 
 //------ Export the Main Function ------//
 module.exports = function(app) {
@@ -13,6 +15,10 @@ module.exports = function(app) {
 		friends.push(req.body);
 		//Return best match
 		res.json(findMatch(friends))
+		//Write new data to friends.js
+		fs.writeFile(path.join(__dirname, "../data/friends.js"), JSON.stringify(friends), function (err) {
+			if (err) throw err
+		});
 	});
 }
 
