@@ -4,14 +4,14 @@ https://dashboard.heroku.com/apps/intense-gorge-35635
 # FriendFinder
 "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
-Before You Begin
+# Before You Begin
 
 
 Check out this demo version of the site. Use this as a model for how we expect your assignment look and operate.
 Create a folder called FriendFinder. Inside the folder, organize your directories so it matches the following:
 
 
-  FriendFinder
+  `FriendFinder
     - app
       - data
         - friends.js
@@ -23,9 +23,9 @@ Create a folder called FriendFinder. Inside the folder, organize your directorie
         - htmlRoutes.js
     - node_modules
     - package.json
-    - server.js
+    - server.js`
 
-Instructions
+# Instructions
 
 
 Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
@@ -51,7 +51,7 @@ A POST routes /api/friends. This will be used to handle incoming survey results.
 You should save your application's data inside of app/data/friends.js as an array of objects. Each of these objects should roughly follow the format below.
 
 
-{
+`{
   "name":"Ahmed",
   "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
   "scores":[
@@ -66,7 +66,7 @@ You should save your application's data inside of app/data/friends.js as an arra
       4,
       1
     ]
-}
+}`
 
 Determine the user's most compatible friend using the following as a guide:
 
