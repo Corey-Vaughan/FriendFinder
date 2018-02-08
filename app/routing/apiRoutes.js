@@ -19,7 +19,7 @@ module.exports = function(app) {
 //Function to find best match
 function findMatch(friends) {
 	//Array for total score differences
-	var matchScoreArry = [];
+	var matchScoreArray = [];
 	//Take newest scores
 	var newScores = friends[friends.length - 1].scores;
 	//Loop though friends array and compare scores (excluding newest/current user score)
@@ -33,10 +33,10 @@ function findMatch(friends) {
 			var difference = Math.abs(userScore - matchScore);
 			totalDiff = difference;
 		}
-		matchScoreArry[i] = totalDiff;
+		matchScoreArray[i] = totalDiff;
 	}
 	//Find lowest value in matchScoreArray
-	var lowVal = Math.min(matchScoreArray);
+	var lowVal = Math.min(...matchScoreArray);
 	//Get index of friend associated with the lowVal
 	var closeMatch = matchScoreArray.indexOf(lowVal);
 	//Return results
